@@ -1,0 +1,21 @@
+<html ng-app>
+	<head>
+		<title>Expression in AngularJS</title>
+		<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.3.3/angular.min.js"></script>
+	</head>
+	<body>
+		<div ng-app="" ng-init="quantity=3;cost=500">
+			<p>Total Harga : {{ quantity * cost}}</p>
+			<p>Total Harga Dengan Bind : <span ng-bind="quantity * cost"></span></p>
+		</div>
+		
+		<div ng-app="" ng-init="quan=''">
+			<p>Quantity: <input type="text" ng-model="quan"></p>
+		</div>
+		<div ng-app="" ng-init="cos">
+			<p>Cost: <input type="text" ng-model="cos"></p><br>
+		</div>
+		<p>Hasil: {{ quan * cos }}</p>
+	</body>
+</html>
+

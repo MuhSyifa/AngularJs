@@ -1,0 +1,24 @@
+<html xmlns="http://www.w3.org/1999/xhtml">
+	<head>
+		<title>For in AngularJS</title>
+		<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.2/angular.min.js"></script>
+	</head>
+	<body ng-app="app">
+		<div ng-controller="forEachController">
+			<div ng-repeat="name in names">
+				{{name}}
+			</div>
+		</div>
+	</body>
+</html>
+<script>
+	var app = angular.module("app", []);
+	app.controller('forEachController', ['$scope', function($scope){
+		$scope.names = [];
+		var values = [{name: 'Jimi', gender: 'laki-laki'}, {name: 'Jimi', gender: 'laki-laki'}, {name: 'Jimi', gender: 'laki-laki'}];
+		angular.forEach(values, function(value, key){
+			$scope.names.push(value.name);
+		});
+	}]);
+</script>
+
